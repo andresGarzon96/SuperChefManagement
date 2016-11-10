@@ -29,7 +29,8 @@ public class Logica {
                 c.getDireccionTienda() != null &&
                 c.getNitTienda().length() > 10 &&
                 c.getNombreTienda() != null &&
-                c.getTelefonoTienda().length() > 6){
+                c.getTelefonoTienda().length() > 6 &&
+                c.getRuta() != null){
             
             cDAO = new ClientesDAO();
             cDAO.registrarCliente(c);
