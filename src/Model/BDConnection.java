@@ -39,7 +39,7 @@ public class BDConnection {
     public boolean crearConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://host:puerto/baseDatos", "usuario", "contraseña");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/superchef?zeroDateTimeBehavior=convertToNull", "root", "root");
         } catch (SQLException | ClassNotFoundException ex) {
             JOptionPane.showMessageDialog(null, ex.getMessage());
             return false;
