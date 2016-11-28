@@ -16,6 +16,8 @@ import javax.swing.JOptionPane;
  */
 public class Logica {
     
+    private Coordinador coordinador;
+    
     public boolean login(){
         String user = JOptionPane.showInputDialog("Ingrese el nombre de usuario");
         String password = JOptionPane.showInputDialog("Ingrese la contraseña de acceso");
@@ -51,6 +53,7 @@ public class Logica {
     }
     
     public void setCoordinador(Coordinador coordinador) {
+        this.coordinador = coordinador;
     }
     
 }

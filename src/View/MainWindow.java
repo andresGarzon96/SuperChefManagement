@@ -73,6 +73,8 @@ public class MainWindow extends javax.swing.JFrame {
     private void initComponents() {
 
         mainDesktop = new javax.swing.JDesktopPane();
+        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         menuBar = new javax.swing.JMenuBar();
         mainMenu = new javax.swing.JMenu();
         clientesMenuItem = new javax.swing.JMenuItem();
@@ -88,20 +90,31 @@ public class MainWindow extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Administración Super Chef");
-        setSize(new java.awt.Dimension(1280, 800));
+        setResizable(false);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
+        mainDesktop.setDragMode(javax.swing.JDesktopPane.OUTLINE_DRAG_MODE);
         mainDesktop.setPreferredSize(new java.awt.Dimension(1280, 800));
+
+        jPanel1.setLayout(new java.awt.GridLayout());
+
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setFocusable(false);
+        jPanel1.add(jButton1);
+
+        mainDesktop.setLayer(jPanel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout mainDesktopLayout = new javax.swing.GroupLayout(mainDesktop);
         mainDesktop.setLayout(mainDesktopLayout);
         mainDesktopLayout.setHorizontalGroup(
             mainDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1280, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         mainDesktopLayout.setVerticalGroup(
             mainDesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         getContentPane().add(mainDesktop);
@@ -151,6 +164,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem clientesMenuItem;
     private javax.swing.JMenuItem empleadosMenuItem;
     private javax.swing.JMenuItem insumosMenuItem;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JDesktopPane mainDesktop;
     private javax.swing.JMenu mainMenu;
     private javax.swing.JPopupMenu.Separator mainMenuSeparator;
